@@ -1,52 +1,58 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-4">
-          {/* Useful Links Section */}
-          <div className="mb-4 md:mb-0">
-            <h2 className="text-xl font-semibold mb-3">Useful Links</h2>
-            <ul className="text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-gray-200">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-gray-200">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-gray-200">Products</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-gray-200">Review</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-gray-200">About Us</a></li>
+    <footer className="bg-gray-100 text-gray-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-wrap justify-center mb-4">
+          <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+            <h5 className="uppercase text-lg font-bold mb-2">About Us</h5>
+            <p className="text-gray-600 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+            <h5 className="uppercase text-lg font-bold mb-2">Quick Links</h5>
+            <ul>
+              <li className="text-gray-600 text-sm mb-2">
+                <a href="#" className="hover:text-gray-900">Home</a>
+              </li>
+              <li className="text-gray-600 text-sm mb-2">
+                <a href="#" className="hover:text-gray-900">Menu</a>
+              </li>
+              <li className="text-gray-600 text-sm mb-2">
+                <a href="#" className="hover:text-gray-900">Review</a>
+              </li>
             </ul>
           </div>
-          
-          {/* Contact Section */}
-          <div className="mb-4 md:mb-0">
-            <h2 className="text-xl font-semibold mb-3">Contact Us</h2>
-            <p className="text-sm text-gray-400">1234 Street Name, City, Country</p>
-            <p className="text-sm text-gray-400">Email: info@yourcompany.com</p>
-            <p className="text-sm text-gray-400">Phone: +123 456 7890</p>
+          <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+            <h5 className="uppercase text-lg font-bold mb-2">Get in Touch</h5>
+            <p className="text-gray-600 text-sm">
+              Address: 123 Main St, Anytown, USA 12345
+            </p>
+            <p className="text-gray-600 text-sm">
+              Phone: 555-555-5555
+            </p>
+            <p className="text-gray-600 text-sm">
+              Email: <a href="mailto:info@example.com" className="hover:text-gray-900">info@example.com</a>
+            </p>
           </div>
         </div>
-
-        {/* Social Media Section */}
-        <div className="flex justify-center space-x-3">
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaFacebookF size={18} />
+        <div className="flex justify-center mb-4">
+          <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+            <FaFacebook size={24} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaTwitter size={18} />
+          <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+            <FaInstagram size={24} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaInstagram size={18} />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaLinkedinIn size={18} />
+          <a href="#" className="text-gray-600 hover:text-gray-900">
+            <FaTwitter size={24} />
           </a>
         </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-gray-700 text-gray-400 text-center py-3 mt-4">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+        <p className="text-gray-600 text-sm text-center">
+          &copy; 2023 Foodie. All rights reserved.
+        </p>
       </div>
     </footer>
   );
