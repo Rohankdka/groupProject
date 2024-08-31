@@ -17,9 +17,9 @@ const Navbar = () => {
             <a href="#" className="text-gray-900 font-bold text-xl">Foodie</a>
           </div>
           <div className="hidden md:flex md:space-x-4">
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Menu</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Review</a>
+            <Link to="/" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link to="/menu" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Menu</Link>
+            <Link to="/review" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Review</Link>
           </div>
           <div className="flex items-center space-x-4">
             {searchVisible && (
@@ -46,9 +46,9 @@ const Navbar = () => {
 
       <div className="md:hidden">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Menu</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Review</a>
+          <Link to="/" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
+          <Link to="/menu" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Menu</Link>
+          <Link to="/review" className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Review</Link>
         </div>
       </div>
     </nav>
