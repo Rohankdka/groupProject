@@ -7,6 +7,7 @@ import Footer from './pages/Footer';
 import Menu from './pages/Menu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Review from './pages/Review';
+import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/review' element={<Review/>}/>
+        <Route path='/profile' element={<Profile/>}/> 
       </Routes>
       <Footer/>
     </BrowserRouter>
