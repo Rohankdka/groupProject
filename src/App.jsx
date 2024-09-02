@@ -8,6 +8,7 @@ import Menu from './pages/Menu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Review from './pages/Review';
 import Profile from './pages/Profile';
+import ForgotPassword from './pages/ForgotPassword';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/review' element={<Review/>}/>
         <Route path='/profile' element={<Profile/>}/> 
+        <Route path='/forgotpassword' element={<ForgotPassword/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
