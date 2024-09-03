@@ -30,7 +30,9 @@ const Navbar = () => {
               />
             )}
             <FaSearch onClick={toggleSearchBar} className="cursor-pointer text-gray-600 hover:text-gray-900 h-5 w-5" />
-            <FaShoppingBag className="text-gray-600 hover:text-gray-900 h-5 w-5" />
+            <Link to="/cart" className="text-gray-600 hover:text-gray-900">
+              <FaShoppingBag className="h-5 w-5" />
+            </Link>
             <Link to="/profile" className="text-gray-600 hover:text-gray-900">
               <FaUser className="h-5 w-5" />
             </Link>
