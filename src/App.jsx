@@ -10,6 +10,7 @@ import Review from './pages/Review';
 import Profile from './pages/Profile';
 import ForgotPassword from './pages/ForgotPassword';
 import Cart from './pages/Cart';
+import AdminDashboard from './Admin/AdminDashboard';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/profile' element={<Profile/>}/> 
         <Route path='/forgotpassword' element={<ForgotPassword/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/admindashboard' element={<AdminDashboard/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
