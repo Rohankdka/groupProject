@@ -19,13 +19,16 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/login", {
+      const response = await axios.post("http://localhost:3000/api/auth/login", {
         email,
         password,
       });
       setMessage("Logged in successfully");
+      setError(null); // Clear any previous errors
+      // Optionally, you can redirect the user or store authentication tokens here
     } catch (error) {
-      setError(error.response.data.message);
+      setMessage(""); // Clear any previous messages
+      setError(error.response?.data?.message || "An unexpected error occurred");
     }
   };
 
@@ -33,12 +36,8 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        {message && (
-          <p className="text-center text-green-500">{message}</p>
-        )}
-        {error && (
-          <p className="text-center text-red-500">{error}</p>
-        )}
+        {message && <p className="text-center text-green-500">{message}</p>}
+        {error && <p className="text-center text-red-500">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
@@ -50,6 +49,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Email"
               value={email}
               onChange={handleChangeEmail}
@@ -68,6 +68,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
+              id="password"
               placeholder="Password"
               value={password}
               onChange={handleChangePassword}
